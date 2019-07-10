@@ -1,0 +1,52 @@
+.header
+  position: relative
+  z-index: 10
+  &__inner
+    height: $header-top-height
+    +flex(space-between, cennter)
+  &__top   
+    background-color: $white
+  &__contacts
+    flex-grow: 1
+  &__bottom
+    background-color: $blue-light
+  &__lang
+    +flex(flex-start, center)
+  &__time
+    color: $white
+    height: 100%
+    +flex(flex-start, center)
+    .icon
+      margin-right: 15px
+
+.contacts
+  +flex(space-around, center)
+  height: 100%
+
+.contact
+  +inline-flex(flex-start, center)
+  .icon
+    fill: $accent
+    margin-right: 10px
+
+.lang
+  position: relative
+  &:hover
+    .lang__list
+      display: block
+  &__title
+    position: relative
+    padding-right: 20px
+    
+    +before
+      +icon-arrow(10, 10, 1, currentColor, -45)
+      position: absolute
+      top: .2em
+      right: 0
+  &__list
+    display: none
+    position: absolute
+    z-index: 1
+    top: 100%
+    width: 100%
+    left: 0

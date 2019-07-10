@@ -12,7 +12,12 @@ h1, h2, h3, h4, h5, h6
   font-weight: 400
 
 .h1, h1
-
+  font-size: 45px
+  +bold
+  line-height: 1.1
+  &--white
+    color: $white
+  
 .h2, h2
 
 .h3, h3
@@ -22,3 +27,7 @@ h1, h2, h3, h4, h5, h6
 .h5, h5
 
 .h6, h6
+
+.text
+  &--white
+    color: $white

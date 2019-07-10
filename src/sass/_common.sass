@@ -15,3 +15,37 @@ input, textarea
   display: inline-block
   fill: currentColor
   font-size: inherit
+
+.container
+  +xlmin
+    max-width: 1440px
+
+.logo
+  display: inline-block
+  font-size: 0
+  +hover
+    text-decoration: none
+
+a:not(.btn)
+  +hover
+    text-decoration: underline
+
+.btn
+  display: inline-block
+  color: $white
+  +bold
+  text-align: center
+  min-width: 210px
+  padding-left: 10px
+  padding-right: 10px
+  padding-top: 10px
+  padding-bottom: 11px
+  font-size: 16px
+  background-color: $accent
+  border: 1px solid  $accent
+  +tr(color .3s, background-color .3s, border-color .3s)
+  +hover
+    background-color: transparent
+    color: $accent
+
+    

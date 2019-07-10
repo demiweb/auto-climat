@@ -1,0 +1,60 @@
+.nav
+  $this: &
+  color: $white
+  ul
+    font-size: 0
+  li
+    display: inline-block
+    text-align: center
+    &.has-dropdown
+      position: relative
+      +before
+        +icon-arrow(8, 8, 1, currentColor, -45)
+        position: absolute
+        pointer-events: none
+        top: 50%
+        transform: translate(0, -50%) rotate(-45deg)
+        right: 20px
+      &:hover
+        +before
+          transform: translate(0, -50%) rotate(-225deg)
+        #{$this}--dropdown
+          display: block
+    &:first-child
+      a
+        border-left: 1px solid  $blue-lighten
+  a
+    font-size: $fz
+    display: flex
+    align-items: center
+    justify-content: center
+    height: $header-top-height
+    padding-left: 40px
+    padding-right: 40px
+    +tr(background-color .3s, color .3s)
+    border-right: 1px solid  $blue-lighten
+    +hover
+      text-decoration: none
+      background-color: $blue-lighten
+
+
+  &--dropdown
+    position: absolute
+    top: 100%
+    left: -1px
+    right: 0
+    z-index: 1
+    background-color: $blue-lighten
+    display: none
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.27)
+    li
+      display: block
+      text-align: center
+    a
+      height: 50px
+      padding-left: 10px
+      padding-right: 10px
+      justify-content: center
+      +hover
+        background-color: $blue-lightest
+        color: #acbbff

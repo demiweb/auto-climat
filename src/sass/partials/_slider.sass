@@ -1,0 +1,36 @@
+.slider
+  &--hero
+    .slide
+      height: calc(100vh - (#{$header-top-height} * 2))
+    &__wrap
+      position: relative
+      .lSPager
+        position: absolute
+        bottom: 30px
+        left: 0
+        width: 100%
+        z-index: 1
+        a
+          background-color: transparent !important
+          width: 10px
+          height: 10px
+          +hidetext
+        li
+          border: 1px solid  $white
+          border-radius: 50%
+          width: 10px
+          height: 10px
+          margin-right: 10px
+          margin-left: 10px
+          padding: 0 !important
+          display: inline-flex !important
+          +inline-flex(center, center)
+          &.active
+            height: 16px
+            width: 16px
+            a
+              background-color: $white !important
+
+.slide
+  &__img
+    display: block
