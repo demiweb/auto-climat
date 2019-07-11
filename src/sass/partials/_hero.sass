@@ -1,7 +1,18 @@
-.hero
+.hero  
   &__block
     height: 100%
     +flex(center, normal, column)
+    padding-left: 75px
+    position: relative
+    z-index: 1
+    +lg
+      padding-left: 50px
+    +md
+      padding-left: 30px
+    +sm
+      padding-left: 15px
+    +xs
+      padding-left: 0
   &__title
     margin-bottom: 20px
     +md
@@ -10,3 +21,6 @@
     margin-bottom: 15px
     +md
       margin-bottom: 10px
+  &__img
+    +xs
+      display: none

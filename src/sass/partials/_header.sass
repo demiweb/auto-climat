@@ -2,14 +2,46 @@
   position: relative
   z-index: 10
   &__inner
-    height: $header-top-height
+    height: $header-height
     +flex(space-between, cennter)
+    +lg
+      height: $header-height-mob
+
+  &__logo
+    +sm
+      flex-grow: 1
   &__top   
     background-color: $white
   &__contacts
     flex-grow: 1
+    +lg
+      .contact
+        &:first-child
+          // display: none
+        &:last-child
+          // display: none
+    +sm
+      display: none
+      
+
   &__bottom
     background-color: $blue-light
+    +xs
+      height: 0
+  &__bottom-els
+    +flex(space-around, center)
+    flex-grow: 1
+    +xs
+      display: none
+  &__bottom-mob
+    display: none
+    text-align: center
+    +xs
+      display: block
+  &__contacts-mob
+    display: none
+    +sm
+      display: block
   &__lang
     +flex(flex-start, center)
   &__time
@@ -18,13 +50,79 @@
     +flex(flex-start, center)
     .icon
       margin-right: 15px
+    +xs
+      color: $c-text
+      justify-content: center
+      margin-bottom: 10px
+  &__nav
+    +lg
+      position: absolute
+      display: none
+      width: 100%
+      top: 100%
+      z-index: 1
+      background-color: $white
+      left: 0      
+      padding-top: 20px
+      padding-bottom: 20px
+      padding-left: 15px
+      padding-right: 15px
+  &__burger
+    display: none
+    margin-left: 20px
+    align-items: center
+    +lg
+      display: flex
+
+.burger
+  display: block
+  width: 28px
+  height: 28px
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+  span:after
+    top: 18px
+  span 
+    position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: currentColor
+    transition: transform 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  &.is-active span 
+    background-color: transparent
+  &.is-active span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+  &.is-active span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
 
 .contacts
-  +flex(space-around, center)
+  +flex(space-around, center, row, wrap)
   height: 100%
+  +lg
+    justify-content: flex-start
+    padding-left: 15px
+    padding-right: 15px
+  +xs
+    padding-left: 0
+    padding-right: 0
 
 .contact
   +inline-flex(flex-start, center)
+  +lg
+    width: 50%
+  +sm
+    justify-content: center
+  +xs
+    width: 100%
+    margin-bottom: 10px
   .icon
     fill: $accent
     margin-right: 10px

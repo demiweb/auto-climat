@@ -1,0 +1,104 @@
+.section
+  $this: &
+  padding-top: 6%
+  padding-bottom: 6%
+  position: relative
+  &__title
+    text-align: center
+    margin-bottom: 45px
+    +lg
+      margin-bottom: 35px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+  &__title-sm
+    margin-bottom: 10px !important
+  &__subttl
+    text-align: center
+    margin-bottom: 50px
+    +lg
+      margin-bottom: 35px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+  &__content
+    +flex(flex-start, normal, row, wrap)
+    position: relative
+    z-index: 1
+  &__content-text
+    padding-top: 50px
+    width: 50%
+    position: relative
+    z-index: 1
+    +lg
+      padding-top: 30px
+    +md
+      padding-top: 15px
+      width: 100%
+    +sm
+      padding-top: 0
+  &__content-img
+    width: 50%
+    +flex(center, normal, column)
+    +md
+      display: none
+      // position: absolute
+      // bottom: 0
+      // right: 0
+      // z-index: 0
+  &__content-img-right
+    img
+      &[data-loaded="true"]
+        transform: translate(10%, 0)
+
+  &--bg
+    +cover
+  &--overlay
+    +before
+      +coverdiv
+      z-index: 0
+      background-color: rgba($blue, .85)
+
+  &--content
+    +image('home/dots.png')
+    background-size: auto
+    background-repeat: no-repeat
+    background-position: 0 100%
+    +before
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      width: 70%
+      z-index: 0
+      background-image: linear-gradient(to left, #dfe8f2, #fff)
+    h2, .h2
+      margin-bottom: 45px
+      +lg
+        margin-bottom: 35px
+      +md
+        margin-bottom: 20px
+      +sm
+        margin-bottom: 15px
+    p
+      margin-bottom: 25px
+      +lg
+        margin-bottom: 15px
+      +sm
+        margin-bottom: 10px
+    
+  &--content-no-dots
+    background-image: none
+
+  &--form
+    padding: 0
+    background-color: #f4f4f4
+    background-repeat: no-repeat
+    background-position: 100% 50%
+    background-size: auto 100%
+    z-index: 5
+    #{$this}__form
+      margin-top: -25px
+      margin-bottom: -25px

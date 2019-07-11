@@ -12,17 +12,27 @@ h1, h2, h3, h4, h5, h6
   font-weight: 400
 
 .h1, h1
-  font-size: 45px
+  +css-lock(28, 38, 320, 1199, font-size)
   +bold
-  line-height: 1.1
+  line-height: 1
   &--white
     color: $white
   
 .h2, h2
+  +css-lock(24, 38, 320, 1199, font-size)
+  +bold
+  line-height: 1
+  &--white
+    color: $white
 
 .h3, h3
 
 .h4, h4
+  +css-lock(17, 21, 320, 1199, font-size)
+  line-height: 1
+  +bold
+  &--white
+    color: $white
 
 .h5, h5
 
@@ -31,3 +41,5 @@ h1, h2, h3, h4, h5, h6
 .text
   &--white
     color: $white
+  &--blue-100
+    color: $blue-100

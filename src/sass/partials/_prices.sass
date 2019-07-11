@@ -1,0 +1,63 @@
+.prices
+
+.price-item
+  position: relative
+  box-shadow: 0px 0px 32.8px 7.2px rgba(0, 0, 0, 0.08)
+  background-color: $white  
+  margin-bottom: 25px
+  height: 100%
+  +lg
+    height: auto
+    margin-bottom: 40px
+  
+  &__inner
+    position: relative
+    overflow: hidden
+    padding: 80px 10px 75px
+    +before
+      background-color: $blue-light
+      width: 100px
+      height: 100px
+      border-radius: 50%
+      top: 0
+      left: 0
+      transform: translate(-50%, -50%)
+      z-index: 0
+      position: absolute
+    +after
+      height: 240px
+      width: 240px
+      position: absolute
+      border-radius: 50%
+      top: -10%
+      right: -10%
+      background-color: rgba($blue-light, .1)
+  &__text
+    margin-bottom: 20px
+    +lg
+      margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+  &__img
+    +coverdiv
+    z-index: 0
+    background-repeat: no-repeat
+    background-size: auto
+    background-position: 100% 0
+    +xl
+      background-position: 150% 0
+    +lg
+      background-position: 100% 0
+
+  &__content
+    max-width: 60%
+    position: relative
+    z-index: 3
+  &__btn
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    text-align: center
+    transform: translate(0, 50%)
+

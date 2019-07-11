@@ -1,0 +1,68 @@
+{%set
+features = [
+  {
+    icon: 'gear',
+    title: 'Выполняем работу качественно',
+    text: 'Мы следим за тем, чтобы наши клиенты 
+получали высочайший уровень 
+обслуживания'
+  },
+  {
+    icon: 'calendar',
+    title: 'Соблюдаем сроки',
+    text: 'Мы ценим время наших клиентов,
+поэтому всегда заканчиваем
+работу вовремя'
+  },
+  {
+    icon: 'interactive',
+    title: 'Используем импортное оборудование',
+    text: 'Мы дорожим репутацией ,поэтому 
+используем только лучшее 
+оборудование'
+  },
+  {
+    icon: 'handshake',
+    title: 'Всегда идем на встречу клиенту',
+    text: 'Мы готовы обсудить любые варианты
+и с удовольствием выполним ваши
+пожелания'
+  },
+  {
+    icon: 'price-tag',
+    title: 'Конкурентное ценообразование',
+    text: 'У нас самые низкие цены в Украине, 
+так как мы работаем напрямую
+ с зарубежными поставщиками'
+  },
+  {
+    icon: 'customer-support',
+    title: 'Широкий спектр услуг',
+    text: 'На нашем сайте вы найдете большой 
+перечень услуг по ремонту
+и установке'
+  }
+]
+%}
+
+<!-- begin features -->
+<div class="features">
+  <div class="row">
+    {% for i in features %}
+    <div class="col-md-4 col-sm-6">
+      <!-- begin feature -->
+      <div class="feature">
+        <div class="feature__icon">
+          {{ mixins.icon(i.icon) }}
+        </div>
+
+        <div class="ferature__title"><h4 class="h4 h4--white">{{ i.title }}</h4></div>
+
+        <div class="feature__text text text--blue-100">{{ i.text }}</div>
+      </div>
+      <!-- end feature -->
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end features -->

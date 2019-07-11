@@ -1,0 +1,56 @@
+.footer
+  background-color: $blue-dark
+  padding-top: 50px
+  padding-bottom: 30px
+  +lg
+    padding-top: 30px
+    padding-bottom: 20px
+  +md
+    padding-top: 20px
+    padding-bottom: 20px
+  +sm
+    padding-top: 15px
+    padding-bottom: 15px
+  &__title
+    margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__logo
+    margin-bottom: 10px
+  &__meta
+    color: $blue-darken
+    p
+      +notlast
+        margin-bottom: 15px
+  &__auth
+    color: $white
+    a
+      text-decoration: underline
+  &__contacts
+    height: 100%
+    +lg
+      height: auto
+      padding-top: 15px
+
+.footer-contacts
+  color: $white
+  height: 100%
+  &__contact
+    position: relative
+    padding-left: 30px
+    margin-bottom: 20px
+    +xl
+      padding-left: 20px
+    +md
+      margin-bottom: 15px
+  &__icon
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate(0, -50%)
+    font-size: 0
+    .icon
+      font-size: $fz
+  &__title

@@ -1,0 +1,125 @@
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 order-4 order-lg-0">
+        <div class="footer__logo">
+          <a href="/" class="logo">
+            <img data-src="img/logo-white.png" alt="" class="js-lazy">
+          </a>
+        </div>
+
+        <div class="footer__meta">
+          <p>Компания "Автоклимат" создана на базе компании 
+            "Империя климата" и оказывает  услуги автолюбителям
+            по ремонту и установке кондиционеров и отопителей. 
+          </p>
+          <p>2019 &copy; Все права защищены</p>
+        </div>
+
+        <div class="footer__auth">
+          Разработка сайта <a href="#">Demiweb International</a>
+        </div>
+      </div>
+
+      <div class="col-xl-2 col-lg-4 col-6">
+        <div class="footer__nav-block">
+          <div class="footer__title">
+            <h4 class="h4 h4--white">Навигация</h4>
+          </div>
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Главная' },
+                { link: '', modItem: 'has-dropdown', item: '<span>Кондиционеры</span>' + mixins.list(
+                  name = '',
+                  modifications = { wrap: 'nav--dropdown', item: '', link: '' },
+                  list = [
+                    { link: 'Установка' },
+                    { link: 'Заправка' },
+                    { link: 'Обслуживание' },
+                    { link: 'Ремонт' }
+                  ]
+                ) },
+                { link: '', modItem: 'has-dropdown', item: '<span>Отопители</span>' + mixins.list(
+                  name = '',
+                  modifications = { wrap: 'nav--dropdown', item: '', link: '' },
+                  list = [
+                    { link: 'Установка' },
+                    { link: 'Заправка' },
+                    { link: 'Обслуживание' },
+                    { link: 'Ремонт' }
+                  ]
+                ) }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-2 col-lg-4 col-6">
+        <div class="footer__nav-block">
+          <div class="footer__title">
+            <h4 class="h4 h4--white">Клиенту</h4>
+          </div>
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Контакты' },
+                { link: 'О нас ' },
+                { link: 'Оформить заказ' }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-2 col-lg-6 col-md-6 col-sm-6">
+        <div class="footer__contacts">
+          <!-- begin footer-contacts -->
+          <div class="footer-contacts">
+            <div class="footer-contacts__contact">
+              <div class="footer-contacts__icon">{{ mixins.icon('phone-call') }}</div>
+
+              <a href="tel:+380964060404" class="footer-contacts__title">+38(096)406-04-04</a>
+              <a href="tel:+380734060404" class="footer-contacts__title">+38(073) 406 04 04</a>
+            </div>
+
+            <div class="footer-contacts__contact">
+              <div class="footer-contacts__icon">{{ mixins.icon('placeholder') }}</div>
+
+              <div class="footer-contacts__title">г.Бердичев,<br> ул. Короленко 41Т</div>
+            </div>
+          </div>
+          <!-- end footer-contacts -->
+        </div>
+      </div>
+
+      <div class="col-xl-2 col-lg-6 col-md-6 col-sm-6">
+        <div class="footer__contacts">
+          <!-- begin footer-contacts -->
+            <div class="footer-contacts">
+              <div class="footer-contacts__contact">
+                <div class="footer-contacts__icon">{{ mixins.icon('clock') }}</div>
+
+                <div class="footer-contacts__title">Пн - Пт<br>
+                9:00 - 17:00</div>
+              </div>
+
+              <div class="footer-contacts__contact">
+                <div class="footer-contacts__icon">{{ mixins.icon('envelope') }}</div>
+
+                <a href="mailto:admin@autoclimat.co.ua" class="footer-contacts__title">admin@autoclimat.co.ua</a>
+              </div>
+            </div>
+            <!-- end footer-contacts -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

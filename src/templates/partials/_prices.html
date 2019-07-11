@@ -1,0 +1,53 @@
+{%set
+prices = [
+  {
+    text: 'Установка штатного 
+кондиционера с оборудованием',
+    img: '1.png',
+    price: '<small>от</small> 900<small>$</small>'
+  },
+  {
+    text: 'Установка накрышного 
+кондиционера с оборудованием',
+    img: '2.png',
+    price: '<small>от</small> 1300<small>$</small>'
+  },
+  {
+    text: 'Заправка кондиционера 
+халогеном R134',
+    img: '3.png',
+    price: '<small>от</small> 80<small>рн (за 100гр.)</small>'
+  }
+]
+%}
+
+<!-- begin price -->
+<div class="prices">
+  <div class="row">
+    {% for i in prices %}
+    <div class="col-lg-4">
+      <!-- begin price-item -->
+      <div class="price-item">
+        <div class="price-item__inner">
+          <div class="price-item__img js-lazy" data-background-image="img/home/prices/{{ i.img }}"></div>
+
+          <div class="price-item__content">
+            <div class="price-item__text">{{ i.text }}</div>
+
+            <div class="price-item__price price">{{ i.price | safe }}</div>
+          </div>
+        </div>    
+
+        <div class="price-item__btn">
+          {{ mixins.btn(
+            title = 'Заказать услугу',
+            mod = ''
+          ) }}
+        </div>
+      </div>
+      <!-- end price-item -->
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end price -->

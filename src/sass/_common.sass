@@ -5,11 +5,16 @@ body
   +reg
   color: $c-text
   +no-scroll
+  +md
+    font-size: 14px
 
 input, textarea
   font-family: inherit
+  color: inherit
+  font-size: inherit
   +placeholder
     font-family: inherit
+    font-size: inherit
 
 .icon
   display: inline-block
@@ -23,8 +28,15 @@ input, textarea
 .logo
   display: inline-block
   font-size: 0
+  max-height: 100%
+  img
+    max-height: 100%
   +hover
     text-decoration: none
+  &--header
+    +lg
+      height: $header-height-mob - 10
+
 
 a:not(.btn)
   +hover
@@ -47,5 +59,56 @@ a:not(.btn)
   +hover
     background-color: transparent
     color: $accent
+  +lg
+    padding-top: 7px
+    padding-bottom: 8px
+  &--shadow
+    box-shadow: 0 0 10px $accent
+  &--full
+    width: 100%
 
+.link-arrow
+  color: $white
+  position: relative
+  +inline-flex(flex-start, center)
+  +hover
+    // .link-arrow__arrow
+    //   width: 50px
+  &__title
+    margin-right: 20px
+  &__arrow
+    position: relative
+    width: 40px
+    right: 0
+    top: 50%
+    transform: translate(0, -50%)
+    display: inline-block
+    transition: transform .3s, width .3s
+    &::after
+      content: ''
+      +icon-arrow(8, 8, 1, currentColor, 225)
+      position: absolute      
+      top: 50%
+      transform: translate(0, -50%) rotate(225deg)
+      right: 0
+    &::before
+      content: ''
+      width: 100%
+      position: absolute
+      height: 1px
+      background-color: currentColor
+      top: 50%
+      right: -1px
+      transform: translate(0, -50%)
+      transition: width .3s
+
+.price
+  @extend .h1
+  small
+    +reg
+    font-size: $fz
+    &:first-child
+      font-size: 16px
+      +bold
+    
     

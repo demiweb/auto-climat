@@ -1,9 +1,30 @@
 .slider
   &--hero
     .slide
-      height: calc(100vh - (#{$header-top-height} * 2))
+      height: calc(100vh - (#{$header-height} * 2))
+      +flex(center, normal, column)
+      +lg
+        height: calc(100vh - (#{$header-height-mob} * 2))
+      +xs
+        height: calc(100vh - #{$header-height-mob})
     &__wrap
       position: relative
+      .lSAction
+        @extend .container
+        position: absolute
+        width: 100%
+        left: 50%
+        transform: translate(-50%, -50%)
+        top: 50%
+        .lSPrev,
+        .lSNext
+          +xs
+            display: none
+        .lSPrev
+          left: -15px
+        .lSNext
+          right: -15px
+
       .lSPager
         position: absolute
         bottom: 30px
