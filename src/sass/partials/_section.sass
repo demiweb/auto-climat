@@ -60,12 +60,10 @@
       +coverdiv
       z-index: 0
       background-color: rgba($blue, .85)
+  &--top
+    padding-top: 15px
 
   &--content
-    +image('home/dots.png')
-    background-size: auto
-    background-repeat: no-repeat
-    background-position: 0 100%
     +before
       position: absolute
       top: 0
@@ -74,6 +72,11 @@
       width: 70%
       z-index: 0
       background-image: linear-gradient(to left, #dfe8f2, #fff)
+    .section-dots
+      bottom: 0
+      left: 0
+      width: 500px
+      height: 500px
     h2, .h2
       margin-bottom: 45px
       +lg
@@ -102,3 +105,14 @@
     #{$this}__form
       margin-top: -25px
       margin-bottom: -25px
+  &--gray
+    background-color: #f7f7f7
+  &--no-pad
+    padding: 0
+
+.section-dots
+  +image('bg-dot.png')
+  background-size: auto
+  background-repeat: repeat
+  position: absolute
+  z-index: 0

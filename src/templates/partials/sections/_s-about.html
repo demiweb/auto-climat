@@ -1,0 +1,103 @@
+{%set
+features = [
+  {
+    icon: 'gear',
+    title: 'Качество превышего всего',
+    text: 'Мы выполняем работу как для себя
+и хотим, чтобы наши клиенты 
+к нам возвращались'
+  },
+  {
+    icon: 'research',
+    title: 'Работаем на результат',
+    text: 'Мы всегда доводим дела до конца,
+полностью удовлетворяя
+все желания клиента'
+  },
+  {
+    icon: 'calendar (1)',
+    title: 'Ценим время клиента',
+    text: 'Мы не затягиваем со сроками 
+и всегда заканчиваем 
+работу вовремя'
+  },
+  {
+    icon: 'businessman',
+    title: 'Смотрим в будущее',
+    text: 'Мы хотим, чтобы нас воспринимали как
+профессионалов, поэтому всегда
+вкладываем душу в работу'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--top">
+  <div class="container">
+    <div class="main__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { item: '', link: 'Главная', modItem: '', modLink: '' },
+          { item: '-' },
+          { item: '', link: 'О нас', modItem: '', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <div class="main__title title-under">
+      <h1 class="h1">О нас</h1>
+    </div>
+  </div>  
+
+  <!-- begin about -->
+  <div class="about">
+    <div class="about__bg js-lazy" data-background-image="img/about/img-top.jpg"></div>
+    <div class="section-dots"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <div class="about__content">
+            <div class="about__title">
+              <h2 class="h2 h2--white">Позиционирование</h2>
+            </div>
+
+            <div class="about__text text text--blue-100">Компания "Автоклимат" создана на базе компании "Империя климата" многие годы успешно работающей на рынке климатической техники.
+            В это время так или иначе приходилось оказывать услуги автолюбителям по ремонту и установке кондиционеров и отопителей. Со временем объем этих услуг позволил выделить направлене автоклимата в отдельный вектор услуг..</div>
+          </div>
+
+        </div>
+
+        <div class="col-7">
+          <div class="about__features">
+            <!-- begin features -->
+            <div class="features">
+              <div class="row">
+                {% for i in features %}
+                <div class="col-6">
+                  <!-- begin feature -->
+                  <div class="feature feature--text">
+                    <div class="feature__icon">
+                      {{ mixins.icon(i.icon) }}
+                    </div>
+
+                    <div class="ferature__title"><h4 class="h4">{{ i.title }}</h4></div>
+
+                    <div class="feature__text text">{{ i.text }}</div>
+                  </div>
+                  <!-- end feature -->
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <!-- end features -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end about -->
+  
+</section>
+<!-- end section -->

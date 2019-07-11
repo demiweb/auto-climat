@@ -43,3 +43,14 @@ h1, h2, h3, h4, h5, h6
     color: $white
   &--blue-100
     color: $blue-100
+
+.title-under
+  position: relative
+  padding-bottom: 8px
+  +before
+    height: 1px
+    width: 65px
+    position: absolute
+    background-color: currentColor
+    left: 0
+    bottom: 0

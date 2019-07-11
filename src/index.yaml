@@ -1,4 +1,5 @@
-ProjectTitle: template
+ProjectTitle: auto-climat
 
 PageList:
-- file: page.html
+- file: home.html
+- file: about.html

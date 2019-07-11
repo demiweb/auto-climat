@@ -1,0 +1,97 @@
+.about
+  position: relative
+  background-repeat: no-repeat
+  background-position: 0 0
+  .section-dots
+    top: -75px
+    bottom: -30px
+    left: 0
+    width: 45%
+  &__bg
+    position: absolute
+    z-index: 1
+    top: 0
+    bottom: 0
+    left: 0
+    +cover
+    width: percentage(825/1920)
+    +before
+      +coverdiv
+      background-color: rgba($blue, .85)
+  &__content
+    position: relative
+    z-index: 2
+    height: 100%
+    +flex(center, normal, column)
+    padding-right: 80px
+    +xl
+      padding-right: 60px
+    +lg
+      padding-right: 40px
+    +md
+      padding-right: 20px
+  &__title
+    margin-bottom: 25px
+    +lg
+      margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+  &__features
+    padding-left: 70px
+    padding-top: 30px
+    +xl
+      padding-left: 60px
+      padding-top: 15px
+    +lg
+      padding-left: 40px
+    +md
+      padding-left: 20px
+
+.about-info
+  &__items
+    background-color: #f7f7f7
+    padding-top: 55px
+    padding-bottom: 55px
+  &__items-wrap
+    +flex()
+  &__bottom
+    background-color: #27346d
+    color: $white
+    padding-top: 30px
+    padding-bottom: 30px
+    .icon
+      font-size: 35px
+      margin-right: 10px
+  &__bottom-inner
+    +flex(flex-end, center)
+  &__bottom-title
+    +bold
+    font-size: 21px
+    margin-right: 75px
+
+.about-info-item
+  text-align: center
+  width: 25%
+  &__icon
+    margin-bottom: 10px
+    .icon
+      font-size: 60px
+      fill: $gray
+  &__title
+    color: $blue-light
+    font-size: 32px
+    text-transform: uppercase
+    position: relative
+    margin-bottom: 10px
+    +bold
+    // padding-bottom: 8px
+    position: relative
+    +before
+      height: 1px
+      width: 55px
+      background-color: $gray
+      position: absolute
+      left: 50%
+      transform: translate(-50%, 0)
+      bottom: 0
+

@@ -1,0 +1,62 @@
+{%set
+info = [
+  {
+    icon: 'mechanic',
+    title: '25',
+    text: 'Опытных специалистов'
+  },
+  {
+    icon: 'goal',
+    title: '8',
+    text: 'Лет опыта в сфере'
+  },
+  {
+    icon: 'happiness',
+    title: '100%',
+    text: 'Довольных клиентов'
+  },
+  {
+    icon: 'racing',
+    title: '650',
+    text: 'Обслуженных автомобилей'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--no-pad">
+  <!-- begin about-info -->
+  <div class="about-info">
+    <div class="about-info__items">
+      <div class="container">
+        <div class="about-info__items-wrap">
+          {% for i in info %}
+          <div class="about-info-item">
+            <div class="about-info-item__icon">{{ mixins.icon(i.icon) }}</div>
+
+            <div class="about-info-item__title">{{ i.title | safe }}</div>
+
+            <div class="about-info-item__text">{{ i.text | safe }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="about-info__bottom">
+      <div class="container">
+        <div class="about-info__bottom-inner">
+          {{ mixins.icon('work-team') }}
+          <div class="about-info__bottom-title">Убедитесь в нашем профессионализме и запишитесь к нам на сервис уже сегодня:</div>
+          {{ mixins.btn(
+            title = 'Оформить заказ',
+            mod = 'btn--lg'
+          ) }}
+        </div>        
+      </div>
+      
+    </div>
+  </div>
+  <!-- end about-info -->
+</section>
+<!-- end section -->

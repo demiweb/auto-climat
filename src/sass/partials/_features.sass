@@ -1,4 +1,5 @@
 .feature
+  $this: &
   text-align: center
   margin-bottom: 30px
   &__icon
@@ -19,6 +20,7 @@
       height: 50%
       border: 1px solid currentColor
       border-bottom: 0
+      border-bottom-color: transparent
       border-top-left-radius: 100px
       border-top-right-radius: 100px
     .icon
@@ -31,3 +33,15 @@
     max-width: 285px
     margin-left: auto
     margin-right: auto
+
+  &--text
+    text-align: left
+    margin-bottom: 45px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    #{$this}__icon
+      margin-left: 0
+      margin-right: 0
+      color: $c-text
