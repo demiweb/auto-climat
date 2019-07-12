@@ -1,0 +1,35 @@
+.table
+  +sm
+    overflow: auto
+  table
+    border: 1px solid  #ddd
+    +sm
+      width: 930px
+  td, th
+    text-align: center
+    vertical-align: middle
+    padding-left: 10px
+    padding-right: 10px
+    +lg
+      padding-top: 15px
+      padding-bottom: 15px
+    +md
+      padding-top: 10px
+      padding-bottom: 10px
+  th
+    font-weight: 400
+    +bold
+    @extend .h4
+    padding-top: 20px
+    padding-bottom: 20px
+    
+  tr
+    
+    &:nth-child(odd)
+      background-color: $white
+    &:nth-child(even)
+      background-color: #fafafa
+  td
+    padding-top: 25px
+    padding-bottom: 25px
+  

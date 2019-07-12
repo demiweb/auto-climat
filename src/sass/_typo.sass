@@ -7,6 +7,7 @@ small
 
 em, i
   font-style: normal
+  +italic
 
 h1, h2, h3, h4, h5, h6
   font-weight: 400
@@ -24,6 +25,8 @@ h1, h2, h3, h4, h5, h6
   line-height: 1
   &--white
     color: $white
+  &--lg
+    +css-lock(24, 45, 320, 1199, font-size)
 
 .h3, h3
 

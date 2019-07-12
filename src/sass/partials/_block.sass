@@ -1,0 +1,61 @@
+.blocks
+  padding-bottom: 6%
+
+.block
+  +notlast
+    margin-bottom: 30px
+  &__title
+    margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__text
+    p
+      margin-bottom: 25px
+      +lg
+        margin-bottom: 15px
+      +sm
+        margin-bottom: 10px
+  &__img
+    padding-top: 60%
+    +cover
+    position: relative
+    overflow: hidden
+    +lg
+      padding-top: 90%
+    +md
+      padding-top: 40%
+      margin-bottom: 15px
+    +xs
+      padding-top: 50%
+  &__price
+    position: absolute
+    bottom: 0
+    right: 0
+    background-color: $blue
+    height: 200px
+    width: 200px
+    padding-top: 55px
+    padding-left: 35px
+    // +flex(center, center)
+    border-radius: 50%
+    transform: translate(30%, 40%)
+    +xs
+      width: 150px
+      height: 150px
+      padding-top: 40px
+      padding-left: 25px
+  &__content
+    padding-left: 35px
+    +xl
+      padding-left: 0
+  &__btns
+    .btn
+      &:first-child
+        margin-right: 30px
+        +lg
+          margin-right: 10px
+        +xs
+          margin-right: 0
+          margin-bottom: 5px

@@ -115,7 +115,7 @@
     padding-right: 0
 
 .contact
-  +inline-flex(flex-start, center)
+  +inline-flex(flex-start, center)  
   +lg
     width: 50%
   +sm
@@ -126,6 +126,10 @@
   .icon
     fill: $accent
     margin-right: 10px
+  &--white
+    color: $white
+    .icon
+      fill: currentColor
 
 .lang
   position: relative

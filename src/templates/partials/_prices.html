@@ -41,7 +41,8 @@ prices = [
         <div class="price-item__btn">
           {{ mixins.btn(
             title = 'Заказать услугу',
-            mod = ''
+            mod = 'js-popup-open',
+            attributes = { 'data-popup-target': 'order' }
           ) }}
         </div>
       </div>

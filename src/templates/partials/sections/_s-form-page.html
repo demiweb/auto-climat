@@ -1,0 +1,80 @@
+{%set
+form = [
+  { name: 'input', type: 'text', placeholder: 'Имя' },
+  { name: 'input', type: 'tel', placeholder: 'Телефон' },
+  { name: 'input', type: 'email', placeholder: 'E-mail' },
+  { name: 'input', type: 'text', placeholder: 'Вид услуги' }
+]
+%}
+
+<!-- begin order -->
+<div class="order js-lazy" data-background-image="img/page/3.jpg">
+  <div class="row align-items-center">
+    <div class="col-xl-6 col-md-6 offset-xl-1">
+      <div class="order__title">
+        <h2 class="h1 h1--white">Закажите услугу по установке кондиционера в ваш автомобиль</h2>
+      </div>
+
+      <div class="order__subttl text text--blue-100">Оставьте ваши контактные данные в форме справа или позвоните нам по телефонам:</div>
+
+      <div class="order__contacts">
+        <div class="order__contacts-left">
+          <a href="tel:+380964060404" class="contact contact--white">{{ mixins.icon('phone-call') }}+38(096)406-04-04</a>
+          <a href="tel:+380734060404" class="contact contact--white">{{ mixins.icon('phone-call') }}+38(073)406-04-04</a>
+        </div>
+
+        <div class="order__contacts-right">
+          <div class="contact contact--white">
+            {{ mixins.icon('placeholder') }}
+            Бердичев ул. Короленко 41Т
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-md-6">
+      <div class="order__form">
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <div class="form__title">
+                <h2 class="h2">Заказать услугу</h2>
+              </div>
+              <div class="form__subttl text text--blue-100">Оставьте ваши контактные данные и наш 
+              менеджер свяжется с вами в ближайшее время</div>
+
+              {% for i in form %}
+              <div class="form__field">
+                {{ mixins.input(
+                  name = i.name,
+                  mod = '',
+                  type = i.type,
+                  placeholder = i.placeholder,
+                  value = '',
+                  fieldClass = ''
+                ) }}
+              </div>
+              {% endfor %}
+
+              <div class="form__btn">
+                {{ mixins.btn(
+                  title = 'Оставить заявку',
+                  mod = 'btn--shadow btn--full',
+                  href = false
+                ) }}
+              </div>
+
+              <div class="form__bottom">
+                {{ mixins.icon('lock') }}
+                Ваши данные не будут переданы третьим лицам
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+    </div>
+  </div>
+</div>
+<!-- end order -->

@@ -21,6 +21,11 @@ input, textarea
   fill: currentColor
   font-size: inherit
 
+.pt-0
+  padding-top: 0 !important
+.pb-0
+  padding-bottom: 0 !important
+
 .container
   +xlmin
     max-width: 1440px
@@ -62,14 +67,26 @@ a:not(.btn)
   +lg
     padding-top: 7px
     padding-bottom: 8px
+  +xs
+    width: 100%
+    min-width: 0
   &--shadow
     box-shadow: 0 0 10px $accent
   &--full
     width: 100%
   &--lg
-    min-width: 330px
-    +xs
-      min-width: 0
+    padding-top: 16px
+    padding-bottom: 17px
+    min-width: 240px
+    +lg
+      min-width: 210px
+  &--transp
+    background-color: transparent
+    color: $accent
+    +hover
+      background-color: $accent
+      color: $white
+    
 
 .link-arrow
   color: $white
@@ -114,5 +131,16 @@ a:not(.btn)
     &:first-child
       font-size: 16px
       +bold
+  &--white
+    color: $white
+
+.map
+  position: relative
+  padding-top: 50%
+  +xs
+
+    padding-top: 60%
+  iframe
+    +coverdiv
     
     

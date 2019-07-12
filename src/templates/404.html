@@ -1,0 +1,17 @@
+---
+title: home
+mainClass: 'main--blue'
+breadcrumbs: [
+  { item: '', link: 'Главная', modItem: '', modLink: '' },
+  { item: '-' },
+  { item: '', link: '404', modItem: '', modLink: 'is-active' }
+]
+breadcrumbsMod: 'breadcrumbs--white'
+---
+{% extends "layouts/_page.html" %}
+
+{% block content %}
+ {% include "partials/_404.html" %}
+{% endblock %}
+
+

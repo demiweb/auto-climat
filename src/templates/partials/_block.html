@@ -1,0 +1,42 @@
+<!-- begin block -->
+<div class="block">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <div class="block__img js-lazy" data-background-image="img/blocks/{{ i.img }}">
+        <div class="block__price">
+          <div class="price price--white">{{ i.price | safe }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="block__content">
+        <div class="block__title">
+          <h2 class="h2">{{ i.title | safe }}</h2>
+        </div>
+
+        <div class="block__text">
+          <p>Компания "Автоклимат" предлагает заказчикам услуги по установке оригинальных 
+            и универсальных кондиционеров. Дополнительные испарители в переоборудуемые микроавтобусы, ионизаторы воздуха. Возможна установка промышленного холодильного оборудования для автомобилей коммерческого назначения.
+          </p>
+          <p>Несмотря на запрет на переоборудование микроавтобусов в маршрутные такси на Украине, существует обширная клиентская база ближнего зарубежья. Люди переоборудуют микроавтобусы для перевозки пассажиров, и как правло, стает вопрос о создании климата в салоне.</p>
+
+        </div>
+
+        <div class="block__btns">
+
+          {{ mixins.btn(
+            title = 'Заказать услугу',
+            mod = 'btn--lg js-popup-open',
+            attributes = { 'data-popup-target': 'order' }
+          ) }}
+          {{ mixins.btn(
+            title = 'Узнать больше',
+            mod = 'btn--lg btn--transp'
+          ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end block -->

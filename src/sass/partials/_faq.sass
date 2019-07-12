@@ -1,0 +1,69 @@
+.faq
+  @extend .row
+
+.question
+  background-color: $white
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.11)
+  border-bottom: 2px solid  $accent
+  margin-bottom: 30px  
+  +sm
+    margin-bottom: 15px
+
+  &__wrap
+    @extend .col-md-6
+
+  &__title
+    +flex(flex-start, center)
+    position: relative
+    width: 100%
+    padding: 35px
+    padding-right: 65px
+    +before
+      +icon-arrow(8, 8, 1, currentColor, -45)
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%) rotate(-45deg)
+      right: 35px
+    &.is-active
+      padding-bottom: 13px
+    +lg
+      padding: 25px
+      padding-right: 40px
+      +before
+        right: 25px
+    +md
+      padding: 20px
+      padding-right: 35px
+      +before
+        right: 20px
+    .icon
+      font-size: 30px
+      margin-right: 12px
+  &__icon
+    display: inline-block
+    color: $gray
+  &__text
+    padding-left: 35px
+    padding-right: 35px
+    
+    // display: none
+    max-height: 0
+    overflow: hidden
+    padding-bottom: 0
+    a
+      color: $blue-link
+      text-decoration: underline
+    +lg
+      padding-left: 25px
+      padding-right: 25px
+    +md
+      padding-left: 20px
+      padding-right: 20px
+    &.is-active
+      max-height: none
+      overflow: visible
+      padding-bottom: 35px
+      +lg
+        padding-bottom: 25px
+      +md
+        padding-bottom: 20px

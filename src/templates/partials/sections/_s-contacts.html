@@ -1,0 +1,79 @@
+{%set
+contacts = [
+  {
+    icon: 'phone-call',
+    title: 'Телефоны:',
+    text: '<a href="tel:+380964060404">+38(096)406-04-04</a>
+            <a href="tel:+380734060404">+38(073) 406 04 04</a>'
+  },
+  {
+    icon: 'placeholder',
+    title: 'Адрес:',
+    text: 'Бердичев ул. Короленко 41Т'
+  },
+  {
+    icon: 'envelope',
+    title: 'Почта:',
+    text: '<a href="mailto:admin@autoclimat.co.ua">admin@autoclimat.co.ua</a>'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section s-map section--top">
+  <div class="section-dots"></div>
+  <div class="container">
+    
+    <div class="row align-items-center">
+      <div class="col-lg-3">
+        <!-- begin contacts-sct -->
+        <div class="contacts-sct">
+          <div class="contacts-sct__contacts">
+            
+            
+            {% for i in contacts %}
+            <!-- begin contacts-block -->
+            <div class="contacts-block">
+              <div class="contacts-block__icon">{{ mixins.icon(i.icon) }}</div>
+
+              <div class="contacts-block__content">
+                <div class="contacts-block__title">
+                  <h4 class="h4">{{ i.title }}</h4>
+                </div>
+
+                <div class="contacts-block__text">{{ i.text | safe }}</div>
+
+                
+              </div>
+            </div>
+            <!-- end contacts-block -->
+            {% endfor %}
+          </div>
+
+          <div class="contacts-sct__btn">
+
+            {{ mixins.btn(
+                title = 'Заказать услугу',
+                mod = 'btn--shadow js-popup-open',
+                attributes = { 'data-popup-target': 'order' }
+              ) }}
+          </div>
+
+          
+        </div>
+        <!-- end contacts-sct -->
+
+        
+      </div>
+
+      <div class="col-lg-9">
+        <!-- begin map -->
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d20309.075323923767!2d30.4721233!3d50.4851493!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1562929105758!5m2!1sru!2sua" width="" height="" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- end map -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

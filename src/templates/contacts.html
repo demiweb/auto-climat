@@ -1,0 +1,17 @@
+---
+title: contacts
+pageTitle: 'Контакты'
+breadcrumbs: [
+  { item: '', link: 'Главная', modItem: '', modLink: '' },
+  { item: '-' },
+  { item: '', link: 'Контакты', modItem: '', modLink: 'is-active' }
+]
+---
+{% extends "layouts/_page.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-contacts.html" %}
+  {% include "partials/sections/_s-contacts-about.html" %}
+{% endblock %}
+
+

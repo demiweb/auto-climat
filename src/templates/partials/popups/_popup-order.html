@@ -1,0 +1,58 @@
+{%set
+form = [
+  { label: { first: mixins.icon('user') }, name: 'input', type: 'text', placeholder: 'Имя' },
+  { label: { first: mixins.icon('telephone') }, name: 'input', type: 'tel', placeholder: 'Телефон' },
+  { label: { first: mixins.icon('black-back-closed-envelope-shape') }, name: 'input', type: 'email', placeholder: 'E-mail' },
+  { label: { first: mixins.icon('pencil-edit-button') }, name: 'input', type: 'text', placeholder: 'Вид услуги' }
+]
+%}
+
+<!-- begin popup -->
+<div class="popup popup--form js-popup" data-popup="order">
+  <div class="popup__inner">
+    <a href="#" class="popup__close js-popup-close"></a>
+    
+    <div class="popup__form">
+      <!-- begin form -->
+        <div class="form">
+          <form>
+            <div class="form__title">
+              <h2 class="h2">Заказать услугу</h2>
+            </div>
+            <div class="form__subttl text text--blue-100">Оставьте ваши контактные данные и наш 
+            менеджер свяжется с вами в ближайшее время</div>
+
+            {% for i in form %}
+            <div class="form__field">
+              {{ mixins.input(
+                name = i.name,
+                mod = 'input--icon',
+                label = i.label,
+                type = i.type,
+                placeholder = i.placeholder,
+                value = '',
+                fieldClass = ''
+              ) }}
+            </div>
+            {% endfor %}
+
+            <div class="form__btn">
+              {{ mixins.btn(
+                title = 'Оставить заявку',
+                mod = 'btn--shadow btn--full',
+                href = false
+              ) }}
+            </div>
+
+            <div class="form__bottom">
+              {{ mixins.icon('lock') }}
+              Ваши данные не будут переданы третьим лицам
+            </div>
+          </form>
+        </div>
+      <!-- end form -->
+    </div>
+
+  </div>
+</div>
+<!-- end popup -->

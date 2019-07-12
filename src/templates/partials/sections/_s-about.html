@@ -33,23 +33,7 @@ features = [
 
 <!-- begin section -->
 <section class="section section--top">
-  <div class="container">
-    <div class="main__breadcrumbs">
-      {{ mixins.list(
-        name = 'breadcrumbs',
-        modifications = { wrap: '', item: '', link: '' },
-        list = [
-          { item: '', link: 'Главная', modItem: '', modLink: '' },
-          { item: '-' },
-          { item: '', link: 'О нас', modItem: '', modLink: 'is-active' }
-        ]
-      ) }}
-    </div>
-
-    <div class="main__title title-under">
-      <h1 class="h1">О нас</h1>
-    </div>
-  </div>  
+   
 
   <!-- begin about -->
   <div class="about">
@@ -57,8 +41,10 @@ features = [
     <div class="section-dots"></div>
     <div class="container">
       <div class="row">
-        <div class="col-5">
+        <div class="col-lg-5">
           <div class="about__content">
+            <div class="about__bg-md js-lazy" data-background-image="img/about/img-top.jpg"></div>
+
             <div class="about__title">
               <h2 class="h2 h2--white">Позиционирование</h2>
             </div>
@@ -69,13 +55,13 @@ features = [
 
         </div>
 
-        <div class="col-7">
+        <div class="col-lg-7">
           <div class="about__features">
             <!-- begin features -->
             <div class="features">
               <div class="row">
                 {% for i in features %}
-                <div class="col-6">
+                <div class="col-sm-6">
                   <!-- begin feature -->
                   <div class="feature feature--text">
                     <div class="feature__icon">

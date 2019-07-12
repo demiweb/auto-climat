@@ -1,4 +1,53 @@
 .slider
+  &__wrap
+    position: relative
+    .lSAction
+      @extend .container
+      position: absolute
+      width: 100%
+      left: 50%
+      transform: translate(-50%, -50%)
+      top: 50%
+      .lSPrev,
+      .lSNext
+        +xs
+          display: none
+      .lSPrev
+        left: -15px
+      .lSNext
+        right: -15px
+  &__prev,
+  &__next
+    position: absolute
+    color: $blue-100
+    top: 35%
+    height: 28px
+    width: 28px
+    border: 2px solid currentColor
+    +inline-flex(center, center)
+    background-color: transparent
+    border-radius: 50%
+    +xs
+      color: $white
+  &__prev
+    left: -50px
+    +lg
+      left: -30px
+    +xs
+      left: 0
+    +before
+      +icon-arrow(8, 8, 2, currentColor, 45)
+      margin-left: .2em
+  &__next
+    right: -50px
+    +lg
+      right: -30px
+    +xs
+      right: 0
+    +before
+      +icon-arrow(8, 8, 2, currentColor, 225)
+      margin-right: .2em
+
   &--hero
     .slide
       height: calc(100vh - (#{$header-height} * 2))
@@ -8,23 +57,6 @@
       +xs
         height: calc(100vh - #{$header-height-mob})
     &__wrap
-      position: relative
-      .lSAction
-        @extend .container
-        position: absolute
-        width: 100%
-        left: 50%
-        transform: translate(-50%, -50%)
-        top: 50%
-        .lSPrev,
-        .lSNext
-          +xs
-            display: none
-        .lSPrev
-          left: -15px
-        .lSNext
-          right: -15px
-
       .lSPager
         position: absolute
         bottom: 30px
@@ -51,6 +83,17 @@
             width: 16px
             a
               background-color: $white !important
+
+  &--specialists
+    .slide
+      padding-top: 20px
+      padding-bottom: 20px
+    &__wrap
+      .lSAction
+        .lSPrev
+          left: -50px
+        .lSNext
+          right: -50px
 
 .slide
   &__img

@@ -1,0 +1,19 @@
+<!-- begin popup -->
+<div class="popup{% if popup.thanks %} is-active{% endif %} js-popup" data-popup="thank_you">
+  <div class="popup__inner">
+    <a href="#" class="popup__close js-popup-close"></a>
+    
+    <div class="popup__title">
+      <h2 class="h2--lg">Спасибо за заявку!</h2>
+    </div>
+
+    <div class="popup__subttl">Наш менеджер свяжется с вами в ближайшее время</div>
+
+    {{ mixins.btn(
+      title = 'Перейти на главную',
+      mod = ''
+    ) }}
+
+  </div>
+</div>
+<!-- end popup -->

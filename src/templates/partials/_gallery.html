@@ -1,0 +1,22 @@
+{%set
+gallery = [
+  { img: '', thumb: '1_06.jpg' },
+  { img: '', thumb: '1_08.jpg' },
+  { img: '', thumb: '1_10.jpg' },
+  { img: '', thumb: '1_06.jpg' },
+  { img: '', thumb: '1_08.jpg' },
+  { img: '', thumb: '1_10.jpg' }
+]
+%}
+
+<!-- begin gallery -->
+<div class="gallery__wrap">
+  <ul class="gallery js-gallery">
+    {% for i in gallery %}
+    <li class="gallery__thumb" data-thumb="img/gallery/{{ i.thumb }}" data-src="img/gallery/1_03.jpg" data-exthumbimage="img/gallery/{{ i.thumb }}">
+      <img src="img/gallery/1_03.jpg" alt="">
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<!-- end gallery -->

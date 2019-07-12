@@ -1,0 +1,50 @@
+---
+title: conditioner-main
+pageTitle: 'Кондиционеры'
+breadcrumbs: [
+  { item: '', link: 'Главная', modItem: '', modLink: '' },
+  { item: '-' },
+  { item: '', link: 'Кондиционеры', modItem: '', modLink: 'is-active' }
+]
+blocks: [
+  {
+    img: '1.jpg',
+    title: 'Установка',
+    text: '',
+    price: '<small>от</small> 110<small>$</small>'
+  },
+  {
+    img: '2.jpg',
+    title: 'Заправка',
+    text: '',
+    price: '<small>от</small> 40<small>$</small>'
+  },
+  {
+    img: '3.jpg',
+    title: 'Обслуживание',
+    text: '',
+    price: '<small>от</small> 150<small>$</small>'
+  },
+  {
+    img: '4.jpg',
+    title: 'Ремонт',
+    text: '',
+    price: '<small>от</small> 90<small>$</small>'
+  }
+]
+---
+{% extends "layouts/_page.html" %}
+
+{% block content %}
+<!-- begin blocks -->
+<section class="blocks">
+  <div class="container">
+    {% for i in blocks %}
+    {% include "partials/_block.html" %}
+    {% endfor %}
+  </div>  
+</section>
+<!-- end blocks -->
+{% endblock %}
+
+

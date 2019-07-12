@@ -23,6 +23,9 @@
       margin-bottom: 20px
     +sm
       margin-bottom: 15px
+  &__text-bd
+    border-top: 2px solid  $accent
+    padding-top: 20px
   &__content
     +flex(flex-start, normal, row, wrap)
     position: relative
@@ -61,7 +64,7 @@
       z-index: 0
       background-color: rgba($blue, .85)
   &--top
-    padding-top: 15px
+    padding-top: 0
 
   &--content
     +before
@@ -75,8 +78,8 @@
     .section-dots
       bottom: 0
       left: 0
-      width: 500px
-      height: 500px
+      width: 30%
+      height: 90%
     h2, .h2
       margin-bottom: 45px
       +lg
@@ -86,14 +89,36 @@
       +sm
         margin-bottom: 15px
     p
-      margin-bottom: 25px
-      +lg
-        margin-bottom: 15px
-      +sm
-        margin-bottom: 10px
+      +notlast
+        margin-bottom: 20px
+        +lg
+          margin-bottom: 15px
+        +sm
+          margin-bottom: 10px
+    ul
+      // list-style-type: disc
+      // padding-left: 15px
+    li
+      margin-bottom: 10px
+      &::before
+        content: "\2022"
+        display: inline-block
+        margin-right: 5px
+    a
+      text-decoration: underline
+      &.contact
+        text-decoration: none
+      &.btn
+        text-decoration: none
+
+
+    #{$this}__title
+      h2, .h2
+        margin-bottom: 0
     
-  &--content-no-dots
-    background-image: none
+  &--content-no-grad
+   +before
+    display: none
 
   &--form
     padding: 0
@@ -109,6 +134,45 @@
     background-color: #f7f7f7
   &--no-pad
     padding: 0
+  &--page
+    padding-top: 0
+    .container
+      +clr
+    a
+      text-decoration: underline
+      &.contact
+        text-decoration: none
+      &.btn
+        text-decoration: none
+    p
+      +notlast
+        margin-bottom: 20px
+        +lg
+          margin-bottom: 15px
+        +sm
+          margin-bottom: 10px
+    ul
+    li
+      margin-bottom: 10px
+      &::before
+        content: "\2022"
+        display: inline-block
+        margin-right: 5px
+    img
+      &.is-left
+        float: left
+        margin-right: 30px
+        margin-bottom: 30px
+        +sm
+          margin-right: 15px
+          margin-bottom: 15px
+      &.is-right
+        float: right
+        margin-left: 30px
+        margin-bottom: 30px
+        +sm
+          margin-left: 15px
+          margin-bottom: 15px
 
 .section-dots
   +image('bg-dot.png')
@@ -116,3 +180,24 @@
   background-repeat: repeat
   position: absolute
   z-index: 0
+
+.s-specialists
+  .section-dots
+    top: 0
+    left: 0
+    width: percentage(360/1920)
+    height: 80%
+
+.s-faq
+  .section-dots
+    top: 5%
+    right: 0
+    width: percentage(590/1920)
+    height: 90%
+
+.s-map
+  .section-dots
+    top: 30px
+    right: 0
+    height: 60%
+    width: 50%

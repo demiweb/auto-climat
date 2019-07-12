@@ -1,0 +1,57 @@
+.popup
+  $this: &
+  position: fixed
+  z-index: 20
+  background-color: rgba($blue-dark, .9)
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  padding: 15px
+  overflow: auto
+  +vertical
+  visibility: hidden
+  opacity: 0
+  +tr(opacity .3s, visibility .3s)
+  &.is-active
+    visibility: visible
+    opacity: 1
+  &__inner
+    background-color: $white
+    display: inline-block
+    vertical-align: middle
+    font-size: $fz
+    position: relative
+    padding-top: 100px
+    padding-bottom: 100px
+    padding-left: 15px
+    padding-right: 15px
+    max-width: 690px
+    width: 100%
+    +md
+      padding-top: 80px
+      padding-bottom: 80px
+  &__title
+    margin-bottom: 20px
+    +lg
+      margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+  &__subttl
+    margin-bottom: 20px
+    +lg
+      margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+  &__close
+    +icon-close(14, 2, currentColor)
+    position: absolute
+    top: 20px
+    right: 20px
+    z-index: 1
+
+  &--form
+    #{$this}__inner
+      padding: 0
+      max-width: 450px
+

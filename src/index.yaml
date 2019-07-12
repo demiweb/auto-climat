@@ -3,3 +3,10 @@ ProjectTitle: auto-climat
 PageList:
 - file: home.html
 - file: about.html
+- file: contacts.html
+- file: conditioner-main.html
+- file: heaters-main.html
+- file: cond-setting.html
+- file: heater-setting.html
+- file: popup-thank-you.html
+- file: 404.html

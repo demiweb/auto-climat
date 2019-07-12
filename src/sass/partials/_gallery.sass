@@ -1,0 +1,47 @@
+.gallery
+  height: auto
+
+  &__wrap
+    li
+      +before
+        display: none
+    +md
+      margin-bottom: 15px
+    .lSAction
+      .lSPrev,
+      .lSNext
+        background-image: none
+        background-color: rgba($black, .9)
+        width: 55px
+        height: 55px
+        +inline-flex(center, center)
+        color: $white
+        opacity: 1
+        border-radius: 50%
+        +lg
+          width: 40px
+          height: 40px
+          +before
+            width: 10px
+            height: 10px
+        +xs
+          width: 30px
+          height: 30px
+      .lSPrev
+        left: 30px
+        +before
+          +icon-arrow(16, 16, 2, currentColor, 45)
+          margin-left: .2em
+        +lg
+          left: 15px
+        +xs
+          left: 5px
+      .lSNext
+        right: 30px
+        +before
+          +icon-arrow(16, 16, 2, currentColor, 225)
+          margin-right: .2em
+        +lg
+          right: 15px
+        +xs
+          right: 5px

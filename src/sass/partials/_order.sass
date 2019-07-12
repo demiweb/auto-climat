@@ -1,0 +1,49 @@
+.order
+  margin-top: 80px
+  margin-bottom: 55px
+  position: relative
+  +lg
+    padding-left: 15px
+  +sm
+    padding-right: 15px
+    padding-top: 10px
+    padding-bottom: 10px
+    margin-top: 25px
+    margin-bottom: 25px
+  +before
+    +coverdiv
+    z-index: 0
+    background-color: rgba($blue, .5)
+  .row
+    position: relative
+    z-index: 1
+  &__form
+    margin-top: -50px
+    margin-bottom: -30px
+    +sm
+      margin-top: 0
+      margin-bottom: 0
+  &__title
+    margin-bottom: 20px
+    +lg
+      margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+  &__subttl
+    margin-bottom: 25px
+    max-width: 360px
+    +lg
+      margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+  &__contacts
+    +flex(flex-start, center)
+    .contact
+      +flex(flex-start, center)
+      margin-bottom: 10px
+    +lg
+      display: block
+  &__contacts-left
+    margin-right: 70px
+    +lg
+      margin-right: 0

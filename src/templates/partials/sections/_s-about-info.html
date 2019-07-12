@@ -45,14 +45,22 @@ info = [
 
     <div class="about-info__bottom">
       <div class="container">
-        <div class="about-info__bottom-inner">
-          {{ mixins.icon('work-team') }}
-          <div class="about-info__bottom-title">Убедитесь в нашем профессионализме и запишитесь к нам на сервис уже сегодня:</div>
-          {{ mixins.btn(
-            title = 'Оформить заказ',
-            mod = 'btn--lg'
-          ) }}
-        </div>        
+        <div class="row">
+          <div class="col-xl-8 col-lg-9 offset-xl-1">
+            <div class="about-info__bottom-left">
+              {{ mixins.icon('work-team') }}
+              <div class="about-info__bottom-title">Убедитесь в нашем профессионализме и запишитесь к нам на сервис уже сегодня:</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 offset-sm-3 offset-lg-0">
+            {{ mixins.btn(
+              title = 'Оформить заказ',
+              mod = 'btn--full'
+            ) }}
+        </div>
+        </div>
+       
       </div>
       
     </div>

@@ -1,0 +1,54 @@
+{%set
+specialists = [
+  { img: '1.jpg', title: 'Дмитрий', subttl: 'Главный механик' },
+  { img: '2.jpg', title: 'Михаил', subttl: 'Специалист по установке' },
+  { img: '3.jpg', title: 'Алексей', subttl: 'Специалист по ремонту' },
+  { img: '4.jpg', title: 'Василиса', subttl: 'Менеджер по работе с клиентами' },
+  { img: '1.jpg', title: 'Дмитрий', subttl: 'Главный механик' },
+  { img: '2.jpg', title: 'Михаил', subttl: 'Специалист по установке' },
+  { img: '3.jpg', title: 'Алексей', subttl: 'Специалист по ремонту' },
+  { img: '4.jpg', title: 'Василиса', subttl: 'Менеджер по работе с клиентами' }
+]
+%}
+
+<!-- begin section -->
+<section class="section s-specialists">
+  <div class="section-dots"></div>
+
+  <div class="container">
+    <div class="section__title section__title-sm">
+      <h2 class="h2">Наши специалисты</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="section__subttl">Мы тщательно выбираем наших сотрудников, поэтому с нами остаются только настоящие профессионалы и фанаты своего дела</div>
+      </div>
+    </div>
+    <!-- begin slider -->
+    <div class="slider__wrap slider--specialists__wrap">
+      <div class="slider slider--specialists js-slider" data-slider="specialists">
+        {% for i in specialists %}
+        <!-- begin slide -->
+        <div class="slide">
+          <!-- begin specialist -->
+          <div class="specialist">
+            <div class="specialist__img js-lazy" data-background-image="img/specialists/{{ i.img }}"></div>
+
+            <div class="specialist__bottom">
+              <div class="specialist__title"><h4 class="h4">{{ i.title }}</h4></div>
+              <div class="specialist__subttl text text--blue-100">{{ i.subttl }}</div>
+            </div>
+          </div>
+          <!-- end specialist -->          
+        </div>
+        <!-- end slide -->
+        {% endfor %}
+      </div>
+
+      <button class="slider__prev js-prev"></button>
+      <button class="slider__next js-next"></button>
+    </div>
+    <!-- end slider -->
+  </div>
+</section>
+<!-- end section -->

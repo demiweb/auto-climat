@@ -1,11 +1,20 @@
 ---
 title: about
+pageTitle: 'О нас'
+breadcrumbs: [
+  { item: '', link: 'Главная', modItem: '', modLink: '' },
+  { item: '-' },
+  { item: '', link: 'О нас', modItem: '', modLink: 'is-active' }
+]
 ---
 {% extends "layouts/_page.html" %}
 
 {% block content %}
   {% include "partials/sections/_s-about.html" %}
   {% include "partials/sections/_s-about-info.html" %}
+  {% include "partials/sections/_s-specialists.html" %}
+  {% include "partials/sections/_s-faq.html" %}
+  {% include "partials/sections/_s-gallery.html" %}
 {% endblock %}
 
 
