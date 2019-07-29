@@ -11,6 +11,8 @@
     +lg
       display: block
       margin-bottom: 20px
+      text-align: left
+      position: relative
       &:first-child
         a, span
           border: 0
@@ -29,6 +31,12 @@
           right: 20px
           +xl
             right: 5px
+          +lg
+            top: .3em
+            transform: translate(0, 0) rotate(-45deg)
+        +lg
+          // right: -50px
+          position: static
       &:hover
         a, span
           +before
@@ -81,6 +89,14 @@
     li
       display: block
       text-align: center
+      +lg
+        border-bottom: 1px solid  $gray
+        margin-bottom: 0 !important
+        &:first-child
+          padding-bottom: 10px
+        +notfirst
+          padding-top: 10px
+          padding-bottom: 10px
     a, span
       height: 50px
       padding-left: 10px
@@ -93,7 +109,7 @@
         color: #acbbff
 
   &--footer
-    color: $blue-darken
+    // color: $blue-darken
     #{$this}--dropdown
       position: static
       background-color: transparent

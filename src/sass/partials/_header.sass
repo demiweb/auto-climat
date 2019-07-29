@@ -1,9 +1,10 @@
 .header
+  $this: &
   position: relative
   z-index: 10
   &__inner
     height: $header-height
-    +flex(space-between, cennter)
+    +flex(space-between, cennter)    
     +lg
       height: $header-height-mob
 
@@ -12,6 +13,9 @@
       flex-grow: 1
   &__top   
     background-color: $white
+    #{$this}__inner
+      padding-top: 10px
+      padding-bottom: 10px
   &__contacts
     flex-grow: 1
     +lg
