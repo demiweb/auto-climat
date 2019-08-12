@@ -1,52 +1,61 @@
 <!-- begin header -->
 <header class="header">
- <div class="header__top">
-   <div class="container">
-    <div class="header__inner">    
-       <div class="header__logo">
-         <a href="/" class="logo logo--header">
-           <img data-src="img/logo.png" alt="" class="js-lazy">
-         </a>
-       </div>
-
-       <div class="header__contacts">
-         <!-- begin contacts -->
-         <div class="contacts">
-         <div class="contact">
-            {{ mixins.icon('placeholder') }}
-           Берд ичев ул. Кор оленко 41Т
-         </div>
-         <a href="tel:+380964060404" class="contact">{{ mixins.icon('phone-call') }}+38(096)406-04-04</a>
-         <a href="tel:+380734060404" class="contact">{{ mixins.icon('phone-call') }}+38(073)406-04-04</a>
-         <a href="mailto:admin@autoclimat.co.ua" class="contact">{{ mixins.icon('envelope') }}admin@autoclimat.co.ua</a>
-         </div>
-         <!-- end contacts -->
-       </div>
-
-       <div class="header__lang">
-         <!-- begin lang -->
-         <div class="lang">
-          <div class="lang__title">Ru</div>
-          <div class="lang__list">
-            <a href="#" class="lang__link">Ua</a>
-          </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/" class="logo logo--header">
+            <img data-src="img/logo.png" alt="" class="js-lazy">
+          </a>
         </div>
-        <!-- end lang -->  
-      </div>
 
-      <div class="header__burger">
-        <a href="#" class="burger js-burger"><span></span></a>
+        <div class="header__contacts">
+          <!-- begin contacts -->
+          <div class="contacts">
+            <div class="contact">
+              {{ mixins.icon('placeholder') }}
+              Берд ичев ул. Кор оленко 41Т
+            </div>
+            <a href="tel:+380964060404" class="contact">{{ mixins.icon('phone-call') }}+38(096)406-04-04</a>
+            <a href="tel:+380734060404" class="contact">{{ mixins.icon('phone-call') }}+38(073)406-04-04</a>
+            <a href="mailto:admin@autoclimat.co.ua"
+              class="contact">{{ mixins.icon('envelope') }}admin@autoclimat.co.ua</a>
+          </div>
+          <!-- end contacts -->
+        </div>
+
+        <div class="header__lang">
+          <!-- begin lang -->
+          <div class="lang">
+            <div class="lang__title">Ru</div>
+            <div class="lang__list">
+              <a href="#" class="lang__link">Ua</a>
+            </div>
+          </div>
+          <!-- end lang -->
+        </div>
+
+        <div class="header__burger">
+          <a href="#" class="burger js-burger"><span></span></a>
+        </div>
       </div>
     </div>
-   </div>
- </div>
+  </div>
 
- <div class="header__bottom">
-   <div class="container">
-    <div class="header__inner">     
-    
-       <div class="header__nav js-menu">
-         {{ mixins.list(
+  <div class="header__bottom-mobile">
+    <a href="tel:  +380964060404" class="contact">
+      {{ mixins.icon('phone-call') }} +38(096)406-04-04</a>
+
+    <a href="tel:  +380964060404" class="contact">
+      {{ mixins.icon('phone-call') }} +38(096)406-04-04</a>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__inner">
+
+        <div class="header__nav js-menu">
+          {{ mixins.list(
            name = 'nav',
            modifications = { wrap: '', item: '', link: '' },
            list = [
@@ -76,45 +85,46 @@
            ]
          ) }}
 
-         <div class="header__contacts-mob">
-           <!-- begin contacts -->
-           <div class="contacts">
-             <div class="contact">
-              {{ mixins.icon('placeholder') }}
-              Берд ичев ул. Кор оленко 41Т
+          <div class="header__contacts-mob">
+            <!-- begin contacts -->
+            <div class="contacts">
+              <div class="contact">
+                {{ mixins.icon('placeholder') }}
+                Берд ичев ул. Кор оленко 41Т
+              </div>
+              <a href="tel:+38096406-04-04" class="contact">{{ mixins.icon('phone-call') }}+38(096)406-04-04</a>
+              <a href="tel:+38073406-04-04" class="contact">{{ mixins.icon('phone-call') }}+38(073)406-04-04</a>
+              <a href="mailto:admin@autoclimat.co.ua"
+                class="contact">{{ mixins.icon('envelope') }}admin@autoclimat.co.ua</a>
             </div>
-            <a href="tel:+38096406-04-04" class="contact">{{ mixins.icon('phone-call') }}+38(096)406-04-04</a>
-            <a href="tel:+38073406-04-04" class="contact">{{ mixins.icon('phone-call') }}+38(073)406-04-04</a>
-            <a href="mailto:admin@autoclimat.co.ua" class="contact">{{ mixins.icon('envelope') }}admin@autoclimat.co.ua</a>
+            <!-- end contacts -->
           </div>
-          <!-- end contacts -->
+
+          <div class="header__bottom-mob">
+            <div class="header__time">{{ mixins.icon('clock') }} График работы: Пн - Пт (9:00 - 17:00)</div>
+
+            <div class="header__btn">
+              {{ mixins.btn(
+             title = 'Оформить заказ',
+             mod = ''
+           ) }}
+            </div>
+          </div>
         </div>
 
-        <div class="header__bottom-mob">
+        <div class="header__bottom-els">
           <div class="header__time">{{ mixins.icon('clock') }} График работы: Пн - Пт (9:00 - 17:00)</div>
 
-         <div class="header__btn">
-           {{ mixins.btn(
+          <div class="header__btn">
+            {{ mixins.btn(
              title = 'Оформить заказ',
              mod = ''
            ) }}
-         </div>
+          </div>
         </div>
-       </div>
-      
-      <div class="header__bottom-els">
-        <div class="header__time">{{ mixins.icon('clock') }} График работы: Пн - Пт (9:00 - 17:00)</div>
 
-         <div class="header__btn">
-           {{ mixins.btn(
-             title = 'Оформить заказ',
-             mod = ''
-           ) }}
-         </div>
       </div>
-       
-     </div>
-   </div>
- </div>
+    </div>
+  </div>
 </header>
 <!-- end header -->
